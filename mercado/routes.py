@@ -1,6 +1,7 @@
 from mercado import app
 from flask import render_template
 from mercado.models import Item
+from mercado.forms import CadastroForm
 
 @app.route('/')
 def page_home():
@@ -9,6 +10,9 @@ def page_home():
 @app.route('/produtos')
 def page_produto():
     itens=Item.query.all()
-
     return render_template("produtos.html",itens=itens)
 
+@app.route('/cadastro')
+def page_cadasteo():
+    form = CadastroForm()
+    return render_template("Cadastro.html", form=form)
