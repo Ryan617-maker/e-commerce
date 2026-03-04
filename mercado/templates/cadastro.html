@@ -13,6 +13,11 @@
         </h1>
         <form method="post" class="form-register" style="color: white;">
 
+            <div class="checkbox mb-3">
+                <h5>Você já possui um cadastro?</h5>
+                <a class="btn btn-sm btn-secondary" href="{{url_for('page_login')}}">Login</a>
+            </div>
+
             {{form.hidden_tag()}}
 
             {{form.usuario.label()}}
