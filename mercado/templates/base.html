@@ -33,7 +33,7 @@
                <i> {{current_user.formtavalor}}</i>
                 </a>
                 <a class="nav-link">Bem vindo, {{ current_user.usuario }}</a>
-                <a class="nav-link" href="{{ url_for('logout')}}">Logout</a>
+                <a class="nav-link" href="{{ url_for('page_logout')}}">Logout</a>
             </div>
 
             {% else %}
